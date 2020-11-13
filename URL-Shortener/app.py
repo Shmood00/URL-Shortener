@@ -54,7 +54,7 @@ class Link(db.Model):
                 self.generate_short_url()
 
             return short_url[:4]
-        else:
+        elif len(short_url) < 4:
             secGen = secrets.SystemRandom()
             new_short = secGen.choices(alpha, k=4)
             
