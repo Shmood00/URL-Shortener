@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+#Location of database should be read from a seperate file
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///urls.db"
 
 db = SQLAlchemy(app)
